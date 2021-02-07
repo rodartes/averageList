@@ -1,14 +1,15 @@
 def emptyList(myList):
-  if myList == False:
+  if len(myList) == 0:
     return True
   else:
     return False
 
-def average(myList):
-  if emptyList(myList) == True:
+def averageList(myList):
+  if emptyList(myList) == False:
     sum = 0
+    numElements = len(myList)
     for ele in myList:
       sum = sum + ele
-      return sum;
+    return sum/numElements
   else:
-    print("Error")
+    return "Error"
